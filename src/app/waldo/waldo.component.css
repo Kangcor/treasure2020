@@ -1,3 +1,8 @@
+.vh100 {
+  background-color: black;
+  height: 100vh;
+}
+
 #imageholder {
   width: 1024px;
   margin: 0 auto;

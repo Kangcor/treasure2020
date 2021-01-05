@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="block">
+    <h1 class="title">Bienvenido</h1>
+
+    <p>Has demostrado tu valía llegando hasta mi isla, pero conseguir mi tesoro no está al alcance de cualquiera.</p>
+
+    <p>Soy el pirata mas famoso del mundo moderno, la mitad del mundo me persigue por mis hazañas y la otra quiere mi rumoreada fortuna.</p>
+
+    <p>Mi nombre es Snowden, si quieres acceder a mi tesoro, deberás superar tres pruebas.</p>
+
+    <p>Deberás localizar a las 5 personas más escurridizas del mundo en su <a routerLink="/waldo" target="_blank">colonia Marciana</a>.</p>
+  </div>
+  <div class="block">
+    <img src="/assets/characters.png">
+  </div>
+  <div class="block">
+    <p>Toma como referencia siempre la cabeza, pese a que en algún caso quizá solo puedas ver una extremidad...</p>
+
+    <p>El órden debe ser preservado, de izquierda a derecha.</p>
+
+    <p>Usa las siguientes tablas para la segunda prueba, necesitarás una nueva perspectiva para verlo, cuanto mas alejado estés, mas claro lo verás.</p>
+  </div>
+  <div class="block">
+    <div class="columns">
+      <div class="column">
+        <img src="/assets/greek.png" alt="">
+      </div>
+      <div class="column">
+        <img src="/assets/fenicio.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <p>Para la tercera prueba no puedo guiarte, si llegado a este punto no conoces la palabra, no eres digno.</p>
+    <div class="columns">
+      <div class="column">
+        <div class="field has-addons">
+          <p class="control">
+            <input class="input" type="text" placeholder="CLAVE" [(ngModel)]="passwd"
+                   [ngClass]="{'is-success': checkPass === 1, 'is-danger': checkPass === 2 }">
+          </p>
+          <p class="control">
+            <button class="button is-primary" (click)="checkPasswd()">
+              Comprobar
+            </button>
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="notification is-danger" *ngIf="checkPass === 2">Código erróneo</div>
+        <div class="notification is-success" *ngIf="checkPass === 1">Bien hecho, <a routerLink="/hanoi">continua</a></div>
+      </div>
+    </div>
+  </div>
+</div>
